@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="ko">
    <head>
@@ -53,8 +56,11 @@
                      </div>
                      <div class="col-md-4">
                         <ul class="right_icon d_none1">
-                           <li><a href="#"><img src="images/shopping.png" alt="#"/></a> </li>
-                           <a href="/login.html" class="order">Login</a> 
+                           <? if (!isset($_SESSION['userid'])) {
+                              echo "<a href='./login.html' class='order'>Login</a>";
+                           } else {
+                              echo "<a href='./logout.php' class='order'>Logout</a>"; 
+                           } ?>
                         </ul>
                      </div>
                   </div>
@@ -71,7 +77,7 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
+                                    <a class="nav-link" href="./index.php">Home</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="about.html">Purchase</a>

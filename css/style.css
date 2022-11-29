@@ -1096,3 +1096,43 @@ margin: 0 15px 20px 15px;
 
 /** end login section **/
 
+/** start join section **/
+
+.join-certified {
+     margin-top: 50px;
+     background: #fff;
+     text-align: center;
+}
+
+.main_form .joinus {
+     border: #183661 solid 1px;
+     padding: 0 15px;
+     margin-bottom: 20px;
+     width: 100%;
+     height: 46px;
+     background: transparent;
+     color: #183661;
+     font-size: 17px;
+     font-weight: normal;
+     padding: 0 15px;
+     box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+}
+
+.join-certified .row {
+     float: none;
+     margin: 0 auto;
+}
+
+.join-certified .col-md-8 {
+     float: none;
+     margin: 0 auto;
+}
+
+.description {
+     font-family: 'NanumSquareNeo-Variable';
+     margin-bottom: 10px;
+     text-align: center;
+}
+
+
+/** end join section **/

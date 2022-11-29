@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>romofyi</title>
+      <title>HaeramMarket</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -53,8 +53,7 @@
                      </div>
                      <div class="col-md-4">
                         <ul class="right_icon d_none1">
-                           <li><a href="#"><img src="images/shopping.png" alt="#"/></a> </li>
-                           <a href="/login.html" class="order">Login</a> 
+                           <a href="./login.html" class="order">Login</a> 
                         </ul>
                      </div>
                   </div>
@@ -105,35 +104,29 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Login</h2>
+                     <h2>Join</h2>
                   </div>
                </div>
             </div>
          </div>
       </div>
       <!-- contact section -->
-      <div id="login" class="login">
+      <div id="join-certified" class="join-certified">
          <div class="con_bg">
             <div class="container">
                <div class="col-md-10 offset-md-1">
-                  <form id="login" class="main_form" action="check_login.php" method="post">
+                  <form id="join-certified" class="main_form" action="./join_email_send.php" method="post">
+                    <p class="description">
+                        학교 메일을 입력해주세요. <br>Send 버튼을 누르면 해당 이메일로 6자리 코드를 보내드립니다.
+                    </p>
                      <div class="row">
                         <div class="col-md-8 col-sm-8">
-                           <input class="loginus" placeholder="ID" type="text" name="userid"> 
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-md-8 col-sm-8">
-                           <input class="loginus" placeholder="Password" type="password" name="passwd" style="margin-bottom: 10px;"> 
-                           <p class="find-link">
-                              <a href="/findinfo.html">아이디/비밀번호 찾기</a>
-                           </p>
+                           <input class="joinus" placeholder="Email" type="email" name="userEmail">
                         </div>
                      </div>
                      <div class="send-div">
                         <div class="col-md-12">
                            <button class="send_btn" type="submit">Send</button>
-                           <button class="send_btn" type="button" style="margin-left: 100px;" onclick="location.href='./join-certified.php';">Join</button>
                         </div>
                      </div>
                   </form>

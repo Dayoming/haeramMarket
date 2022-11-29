@@ -48,7 +48,7 @@
                   <div class="row d_flex">
                      <div class="col-md-4">
                         <ul class="conta_icon d_none1">
-                           <li><a href="#"><img src="images/email.png" alt="#"/> demo@gmail.com</a> </li>
+                           <li><a href="#"><img src="images/email.png" alt="#"/>demo@gmail.com</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
@@ -189,7 +189,6 @@
             </div>
             <div class="row">
             <div class="product_main">
-             
                   <div class="project_box ">
                      <div class="dark_white_bg" ><img  src="images/shoes1.png" alt="#"/></div>
                      <h3>Short Openwork Cardigan $120.00</h3>

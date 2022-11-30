@@ -115,18 +115,18 @@
          <div class="con_bg">
             <div class="container">
                <div class="col-md-10 offset-md-1">
-                  <form id="join-certified" class="main_form" action="./join_email_send.php" method="post">
+                  <form id="joinCertified" class="main_form" action="./join_email_send.php" method="post">
                     <p class="description">
                         학교 메일을 입력해주세요. <br>Send 버튼을 누르면 해당 이메일로 6자리 코드를 보내드립니다.
                     </p>
                      <div class="row">
                         <div class="col-md-8 col-sm-8">
-                           <input class="joinus" placeholder="Email" type="email" name="userEmail">
+                           <input class="joinus" id="userEmail" placeholder="Email" type="email" name="userEmail">
                         </div>
                      </div>
                      <div class="send-div">
                         <div class="col-md-12">
-                           <button class="send_btn" type="submit">Send</button>
+                           <button class="send_btn" type="button" onclick="verifyEmail();">Send</button>
                         </div>
                      </div>
                   </form>
@@ -186,6 +186,23 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+
+      <script type="text/javascript">
+         verifyEmail = function() {
+            let regex = new RegExp('[a-z0-9]+@gwnu.ac.kr');
+            let email = document.getElementById('userEmail').value;
+      
+            if (email == '') {
+               alert("이메일을 입력해주세요.");
+            } else if (!regex.test(email)) {
+               alert("강릉원주대학교 웹 메일로만 인증할 수 있습니다.")
+               document.getElementById('userEmail').value = '';
+            } else {
+               document.getElementById('joinCertified').submit();
+            }
+         }
+
+      </script>
    </body>
 </html>
 

@@ -124,7 +124,7 @@ header("Content-Type: text/html; charset=UTF-8");
          </div>
       </div>
       <!-- contact section -->
-      <div id="join-email-send" class="join-email-send">
+      <div id="join-email-send" class="join-certified">
          <div class="con_bg">
             <div class="container">
                <div class="col-md-10 offset-md-1">

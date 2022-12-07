@@ -1,15 +1,5 @@
 <?php
-$code = rand(100000, 999999);
-$userEmail = $_POST['userEmail'];
-
-$to = $userEmail;
-$subject = "해람마켓 회원가입 인증 코드 발송";
-$contents = "Code : ".$code;
-$headers = "From: webmaster@localhost\r\n";
-$title_encode = "=?utf-8?B?".base64_encode($title)."?=\n";
-mail($to, $subject, $contents, $headers);
-
-header("Content-Type: text/html; charset=UTF-8");
+    $userEmail = $_POST['userEmail'];
 ?>
 
 <!DOCTYPE html>
@@ -125,23 +115,37 @@ header("Content-Type: text/html; charset=UTF-8");
          </div>
       </div>
       <!-- contact section -->
-      <div id="join-email-send" class="join-certified">
+      <div id="join-certified" class="join-certified">
          <div class="con_bg">
             <div class="container">
                <div class="col-md-10 offset-md-1">
-                  <form id="joinEmailSend" class="main_form" action="./join.php" method="post">
+                  <form id="checkJoin" class="main_form" action="./check_join.php" method="post">
                     <p class="description">
-                        발송된 코드를 입력해주세요.
+                        아래 항목을 빠짐없이 기재해주세요.
                     </p>
                      <div class="row">
                         <div class="col-md-8 col-sm-8">
-                           <input class="joinus" id="code" placeholder="Code" type="text" name="code">
-                           <?php echo "<input type='hidden' name='userEmail' value='".$userEmail."'>"; ?>
+                           <?php echo "<input class='joinus' id='userEmail' placeholder='userEmail' type='text' name='userEmail' value='".$userEmail."' readonly>"; ?>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                           <input class="joinus" id="userId" placeholder="ID" type="text" name="userId">
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                           <input class="joinus" id="userPw" placeholder="Password" type="password" name="userPw">
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                           <input class="joinus" id="userName" placeholder="Username" type="text" name="userName">
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                           <input class="joinus" id="userDepart" placeholder="Depart" type="text" name="userDepart">
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                           <input class="joinus" id="userBirth" placeholder="Birthday" type="date" name="userBirth">
                         </div>
                      </div>
                      <div class="send-div">
                         <div class="col-md-12">
-                           <button class="send_btn" type="button" onclick="verifyCode();">Send</button>
+                           <button class="send_btn" type="submit">Send</button>
                         </div>
                      </div>
                   </form>
@@ -201,19 +205,6 @@ header("Content-Type: text/html; charset=UTF-8");
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-      <script type="text/javascript">
-         verifyCode = function() {
-            let code = document.getElementById('code').value;
-            <?echo "let serverCode = ".$code.";" ?>
-
-            if (code != serverCode) {
-               alert("코드가 일치하지 않습니다.");
-            } else {
-               document.getElementById('joinEmailSend').submit();
-            }
-         }
-
-      </script>
    </body>
 </html>
 

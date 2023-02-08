@@ -1,5 +1,6 @@
 # haeramMarket
 데이터베이스응용 1팀 팀 프로젝트
+강릉원주대학생 전용 중고거래 사이트 '해람마켓'
 ## VS Code와 Github Project 연동 방법
 https://0ver-grow.tistory.com/888
 

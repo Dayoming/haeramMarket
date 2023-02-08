@@ -618,6 +618,7 @@ position: absolute;
 
 .six_box .six_probpx span {
      color: #fff;
+     font-family: 'NanumSquareNeo-Variable';
      font-size: 17px;
      line-height: 32px;
      text-transform: uppercase;
@@ -631,7 +632,7 @@ position: absolute;
 /** project section **/
 
 .project {
-     background: url(../images/product_bg.jpg);
+     background: white;
      background-size: 100% 100%;
      background-repeat: no-repeat;
      padding: 90px 0 90px 0;
@@ -1102,6 +1103,7 @@ margin: 0 15px 20px 15px;
      margin-top: 50px;
      background: #fff;
      text-align: center;
+     font-family: 'NanumSquareNeo-Variable';
 }
 
 .main_form .joinus {
@@ -1136,3 +1138,470 @@ margin: 0 15px 20px 15px;
 
 
 /** end join section **/
+
+/** start purchase section **/
+.purchase_main {
+     width: 100%;
+     display:flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin-top: 8em;
+}
+
+.search_box {
+     text-align: center;
+     margin: 2em 0;
+}
+
+.search_box input {
+     border: #183661 solid 1px;
+     padding: 0 15px;
+     margin-bottom: 20px;
+     width: 30%;
+     height: 30px;
+     background: transparent;
+     color: #183661;
+     font-size: 14px;
+     font-weight: normal;
+     padding: 0 15px;
+     box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+}
+
+.search_box select {
+     border: #183661 solid 1px;
+     padding: 0 15px;
+     margin-bottom: 20px;
+     height: 30px;
+     background: transparent;
+     color: #183661;
+     font-size: 14px;
+     font-weight: normal;
+     padding: 0 15px;
+     box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+}
+
+.search_btn {
+     width: 80px;
+     font-weight: 400;
+     text-align: center;
+     border-radius: 43px;
+     padding: 8px 0;
+     margin-top: 50px !important;
+     margin: 0 auto;
+     margin-left: 10px;
+     text-transform: none;
+     color: #ffffff;
+     background: #183661;
+     font-family: 'NanumSquareNeo-Variable';
+}
+
+.category_ul {
+     font-family: 'NanumSquareNeo-Variable';
+     font-size: large;
+}
+
+.category_ul li {
+     padding: 10px;
+     border-bottom: 1px solid;
+     border-color: #f3a20d;
+}
+
+.category_ul li:hover {
+     background-color: #f3a20d;
+}
+
+.category_ul li a:hover {
+     color: white;
+}
+
+.category_ul .li_active {
+     background: #f3a20d;
+}
+
+.category_ul .li_active a {
+     color: white;
+}
+/** end purchase section **/
+
+/** start sale section **/
+:root {
+     --surface-color: #fff;
+     --curve: 40;
+   }
+   
+   * {
+     box-sizing: border-box;
+   }
+   
+   body {
+     font-family: 'Noto Sans JP', sans-serif;
+     background-color: #ffffff;
+   }
+   
+   .cards {
+     display: grid;
+     grid-template-columns: repeat(4, minmax(300px, 1fr));
+     gap: 2rem;
+     margin: 4rem 5vw;
+     padding: 0;
+     list-style-type: none;
+   }
+   
+   .card {
+     position: relative;
+     display: block;
+     height: 100%;  
+     border-radius: calc(var(--curve) * 1px);
+     overflow: hidden;
+     text-decoration: none;
+   }
+   
+   .card__image {      
+     width: 100%;
+     height: auto;
+   }
+   
+   .card__overlay {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     z-index: 1;      
+     border-radius: calc(var(--curve) * 1px);    
+     background-color: var(--surface-color);      
+     transform: translateY(100%);
+     transition: .2s ease-in-out;
+   }
+   
+   .card:hover .card__overlay {
+     transform: translateY(0);
+   }
+   
+   .card__header {
+     position: relative;
+     display: flex;
+     align-items: center;
+     gap: 2em;
+     padding: 1em;
+     border-radius: calc(var(--curve) * 1px) 0 0 0;    
+     background-color: var(--surface-color);
+     transform: translateY(-100%);
+     transition: .2s ease-in-out;
+   }
+   
+   .card__arc {
+     width: 80px;
+     height: 80px;
+     position: absolute;
+     bottom: 100%;
+     right: 0;      
+     z-index: 1;
+   }
+   
+   .card__arc path {
+     fill: var(--surface-color);
+     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+   }       
+   
+   .card:hover .card__header {
+     transform: translateY(0);
+   }
+   
+   .card__thumb {
+     flex-shrink: 0;
+     width: 50px;
+     height: 50px;      
+     border-radius: 50%;      
+   }
+   
+   .card__title {
+     font-size: 1em;
+     font-family: 'NanumSquareNeo-Variable';
+     font-weight: bold;
+     margin: 0 0 .3em;
+     color: #6A515E;
+   }
+   
+   .card__tagline {
+     display: block;
+     margin: 1em 0;
+     font-family: "MockFlowFont";  
+     font-size: .8em; 
+     color: #D7BDCA;  
+   }
+   
+   .card__status {
+     font-size: .8em;
+     color: #D7BDCA;
+   }
+   
+   .card__description {
+     padding: 0 2em 2em;
+     margin: 0;
+     color: #D7BDCA;
+     font-family: 'NanumSquareNeo-Variable'; 
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 3;
+     overflow: hidden;
+   }
+
+     .sale_main {
+          display:flex; flex-wrap: wrap; justify-content: center;
+          margin-top: 4em;
+     }
+/** end sale section **/
+
+
+/** start read section **/
+     .board_read {
+          font-family: 'NanumSquareNeo-Variable';
+     }
+
+     .reply_view {
+          margin-bottom: 3em;
+          font-family: 'NanumSquareNeo-Variable';
+     }
+
+     .reply_view textarea {
+          border: #183661 solid 1px;
+          padding: 0 15px;
+          width: 91%;
+          height: 100px;
+          background: transparent;
+          color: #183661;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 0 15px;
+          box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+     }
+
+     .reply_view .re_mo_bt {
+          width: 64px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 10px;
+          padding: 5px 0;
+          max-width: 100px;
+          margin: 0 auto;
+          height: 100px;
+          display: block;
+          float: right;
+          text-transform: none;
+          color: #ffffff;
+          background: #183661;
+          font-family: 'NanumSquareNeo-Variable';
+     }
+
+     .reply_view .dat_edit_bt {
+          width: 100px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 10px;
+          padding: 5px 0;
+          max-width: 100px;
+          margin: 0 auto;
+          margin-left: 5px;
+          margin-right: 5px;
+          display: block;
+          float: right;
+          text-transform: none;
+          color: #ffffff;
+          background: #183661;
+          font-family: 'NanumSquareNeo-Variable';
+     }
+
+     .reply_view .dat_delete_bt {
+          width: 100px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 10px;
+          padding: 5px 0;
+          max-width: 100px;
+          margin: 0 auto;
+          margin-left: 5px;
+          margin-right: 5px;
+          display: block;
+          float: right;
+          text-transform: none;
+          color: #ffffff;
+          background: #183661;
+          font-family: 'NanumSquareNeo-Variable';
+     }
+     
+     .dap_lo {
+          margin-bottom: 15px;
+     }
+
+     .dap_ins {
+          margin-top: 4em;
+     }
+
+     .dap_ins input {
+          border: #183661 solid 1px;
+          padding: 0 15px;
+          width: 30%;
+          height: 30px;
+          background: #ffffff;
+          color: #183661;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 0 15px;
+          box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+     }
+
+     .dap_ins textarea {
+          border: #183661 solid 1px;
+          padding: 0 15px;
+          width: 91%;
+          height: 100px;
+          background: transparent;
+          color: #183661;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 0 15px;
+          box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+     }
+
+     .dap_ins .re_bt {
+          width: 64px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 10px;
+          padding: 5px 0;
+          max-width: 100px;
+          margin: 0 auto;
+          height: 100px;
+          display: block;
+          float: right;
+          text-transform: none;
+          color: #ffffff;
+          background: #183661;
+          font-family: 'NanumSquareNeo-Variable';
+     }
+
+     .bo_ser {
+          text-align: right;
+     }
+
+     .bo_ser li a {
+          width: 100px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 10px;
+          padding: 5px 0;
+          max-width: 100px;
+          margin: 0 auto;
+          margin-left: 5px;
+          margin-right: 5px;
+          display: block;
+          float: right;
+          text-transform: none;
+          color: #ffffff;
+          background: #183661;
+          font-family: 'NanumSquareNeo-Variable';
+     }
+/** end read section **/
+
+/** start write section **/
+
+.write_main {
+     font-family: 'NanumSquareNeo-Variable';
+}
+
+.write_main select {
+     border: #183661 solid 1px;
+     padding: 0 15px;
+     margin-bottom: 20px;
+     height: 30px;
+     background: transparent;
+     color: #183661;
+     font-size: 14px;
+     font-weight: normal;
+     padding: 0 15px;
+     box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+}
+
+.write_main .write_input {
+     border: #183661 solid 1px;
+          padding: 0 15px;
+          width: 50%;
+          height: 42px;
+          background: #ffffff;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          color: #183661;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 0 15px;
+          box-shadow: 0 0 5px rgba(243, 195, 30, 0.5);
+}
+
+.write_btn_div {
+     float: right;
+     margin-right: 4em;
+   }
+
+   .write_btn {
+     width: 100px;
+     font-weight: 500;
+     text-align: center;
+     border-radius: 43px;
+     padding: 13px 0;
+     max-width: 150px;
+     margin-top: 50px !important;
+     margin: 0 auto;
+     display: block;
+     text-transform: none;
+     color: #ffffff;
+     background: #183661;
+     padding: 10px 0;
+     font-family: 'NanumSquareNeo-Variable';
+   }
+
+   .write_btn:hover {
+     background-color: #f2c119;
+     color: #ffffff;
+     }
+
+     
+/** end write section **/
+
+/** start mypage section **/
+     .mypage_main {
+          margin-top: 50px;
+          margin-bottom: 50px;
+          font-family: 'NanumSquareNeo-Variable';
+     }
+
+     #photo {
+          margin-bottom: 20px;
+     }
+
+     .custom_btn {
+          width: 130px;
+          font-weight: 500;
+          border: 0;
+          text-align: center;
+          border-radius: 43px;
+          padding: 13px 0;
+          max-width: 150px;
+          margin: 0 auto;
+          float: right;
+          text-transform: none;
+          color: #ffffff;
+          background: #183661;
+          padding: 10px 0;
+          font-family: 'NanumSquareNeo-Variable';
+          margin-left: 5px;
+          margin-right: 5px;
+     }
+
+     .btn {
+          float: right;
+     }
+
+     #div_button {
+          padding: 30px;
+     }
+/** end mypage section **/

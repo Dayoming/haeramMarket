@@ -8,7 +8,7 @@
         $passwd = $_POST['passwd'];
 
         if(!isset($_SESSION['userid'])) {
-            $query = "SELECT user_id, user_pw from $table WHERE user_id='$userid'";
+            $query = "SELECT user_id, user_pw, user_name, user_email from $table WHERE user_id='$userid'";
             $result = mysql_query($query, $con);
 
             if(!mysql_num_rows($result)) {
@@ -19,10 +19,14 @@
             $dbpasswd = mysql_result($result, 0, "user_pw");
             if($dbid==$userid AND $dbpasswd == $passwd) {
                 session_start();
+                $userName = mysql_result($result, 0, "user_name");
+                $userEmail = mysql_result($result, 0, "user_email");
                 $_SESSION['userid'] = $userid;
+                $_SESSION['userName'] = $userName;
+                $_SESSION['userEmail'] = $userEmail;
                 return 1;
             } else {
-                $errormsg = $userid."님 패스워드가 틀렸습니다";
+                $errormsg = $userid."님 패스워드가 틀렸습니다.";
                 return 0;
             }
             }
@@ -43,7 +47,7 @@
 
         if ($login_result == 0) {
             echo "<script type='text/javascript'>alert('".$errormsg."');
-                        location.replace('./login.html');
+                        location.replace('./login.php');
                     </script>";
         } else {
             if ($login_result == 1) {
